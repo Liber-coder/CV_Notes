@@ -90,4 +90,6 @@ TODO：详细的贡献指南参考[这里]()，包括要求和git使用
 
 ## License
 
+遵循[ CC 4.0 BY ](http://creativecommons.org/licenses/by/4.0/)版权协议，转载请附上原文出处链接和本声明。
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
