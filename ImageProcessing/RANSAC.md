@@ -396,3 +396,5 @@ cvRANSACUpdateNumIters( double p, double ep,
 
 - [RANSAC算法学习笔记](https://www.jianshu.com/p/4e426f0c48cc)
 - [RANSAC算法原理与源码解析](https://blog.csdn.net/luoshixian099/article/details/50217655)
+- [[我的数学之美(一)——RANSAC算法详解](https://www.baidu.com/link?url=X3PPVBu0grFjaHz7XHJ2EyR5k_kUPddaq77JxDX3q7RAYVFCJyPX5PSBY_deA6etGhziTXohFJHVkTg4RlLj2cW1zNcRY_UFZfeCezvIF2bjQpYPwmAfMgp-ad5P2m5M&wd=&eqid=9c9040c5002a6184000000035f01c815)
+
