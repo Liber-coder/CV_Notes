@@ -2,15 +2,15 @@
 
 参考： https://www.jianshu.com/p/8c69d1021d98 
 
-![TIM截图20200704133339](.markdown.images\1.png)
+![1](.markdown.images/1.png)
 
 1. Fork。第一步是Fork他人仓库，具体啥是Fork，自行百度，经过Fork以后就可以在自己的账号下得到对应的远程副本，可以自己的仓库找到如下图所示，
 
-   ![TIM截图20200704133339](.markdown.images\2.png)
+   ![2](.markdown.images/2.png)
 
 2. clone。从Fork后的远程副本clone仓库到本地目录，接下来在自己的项目里面打开这个项目，复制如下图的链接
 
-   ![TIM截图20200704133339](.markdown.images\3.png)
+   ![3](.markdown.images/3.png)
 
    并且在自己文件目录下打开终端输入以下指令
 
@@ -66,7 +66,7 @@
 
    首先创建一个Pull Request
 
-![TIM截图20200704133339](.markdown.images\4.png)
+![4](.markdown.images/4.png)
 
 ​		 提交Pull Request，最好注释上自己添加的内容，方便作者的进行审阅
 
@@ -78,7 +78,7 @@
 >
 > 添加源仓库作为上游代码库（你从哪里fork过来的，就填那个仓库）
 >
-> ![TIM截图20200704133339](.markdown.images\7.png)
+> ![7](.markdown.images/7.png)
 >
 > ```shell
 > git remote add upstream https://github.com/KNLc/CV_Notes.git
@@ -125,7 +125,7 @@
 > git pull upstream master
 > ```
 >
-> ![TIM截图20200704133339](.markdown.images\8.png)
+> ![8](.markdown.images/8.png)
 >
 > 此时，你的本地库已经和原仓库已经完全同步了。但是注意，此时只是你电脑上的本地库和远程的github原仓库同步了，你自己的github仓库还没有同步，此时需要使用“git push”命令把你本地的仓库提交到github中。 
 >
