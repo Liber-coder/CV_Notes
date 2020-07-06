@@ -1,0 +1,267 @@
+## 如何利用 Git 与 GitHub 进行多人协作开发
+
+参考： https://www.jianshu.com/p/8c69d1021d98 
+
+![1](.markdown.images/1.png)
+
+1. Fork。第一步是Fork他人仓库，具体啥是Fork，自行百度，经过Fork以后就可以在自己的账号下得到对应的远程副本，可以自己的仓库找到如下图所示，
+
+   ![2](.markdown.images/2.png)
+
+2. clone。从Fork后的远程副本clone仓库到本地目录，接下来在自己的项目里面打开这个项目，复制如下图的链接
+
+   ![3](.markdown.images/3.png)
+
+   并且在自己文件目录下打开终端输入以下指令
+
+   ```
+   git clone "这部分是你上面复制的链接"
+   ```
+
+   就可以在自己的目录下出现`CV_Notes`这个文件夹
+
+3. branch。一般不要将自己做的修改提交到 **master branch（主分支）**上，而是应该提交到某个明确的 **topic branch（主题分支，解决某个bug或者添加某一功能的分支）**上。**注意，我们应该自己建一个 topic branch，然后在上面作修改，而不在 master 分支直接修改，因为这样更具有直观性。**
+
+   ```
+   git branch topic   #创建topic分支,topic是可以修改，自定
+   git checkout topic #切换到topic分支
+   ```
+
+4. 修改。对文本和项目进行修改
+
+5. 添加add修改：
+
+   ```
+   git add .
+   ```
+
+6. 添加commit注释
+
+   ```
+   git commit -m "修改的项目的注释"
+   ```
+
+7. push。推送修改到自己的远程副本上。
+
+   1. 推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上，例如把本地的master分支推送上去：
+       ```shell
+       git push origin master
+       ```
+
+       例如branch分支推送上去：
+
+       ```
+       git push origin topic  ## 对应上面
+       ```
+
+   2. 方法一：HTTPS协议推送
+
+      使用HTTPS协议，有一种简单粗暴的方式是在远程地址中带上密码。 
+
+      ```shell
+      git remote set-url origin http://yourname:password@github.com/yourname/project.git
+      ```
+
+8. Pull Request。这部分是将自己的远程代码提交给作者，这个需要在自己的远程副本上创建一个 Pull Request，等待原作者处理。项目的维护者会受到你的请求，只要他/她通过了你的请求，你所做的修改就会被整合到原项目的仓库里了。
+
+   首先创建一个Pull Request
+
+![4](.markdown.images/4.png)
+
+​		 提交Pull Request，最好注释上自己添加的内容，方便作者的进行审阅
+
+接下来需要解决的是与Fork原仓库保持同步更新
+
+> 说到合作开发就会有一个问题，如何与他人的代码保持同步？在自己做开发的过程中，难免会遇到你 “Fork” 的项目已经有了新的更新，这时当然是希望自己仓库中的代码也能同步进行更新。可是，你本地仓库所连接的远程仓库的是你自己的 GitHub 仓库，而不是原作者的仓库。**解决方法其实很简单，为你的本地仓库再添加一个远程仓库源。**
+>
+> 参考： https://blog.csdn.net/matrix_google/article/details/80676034 
+>
+> 添加源仓库作为上游代码库（你从哪里fork过来的，就填那个仓库）
+>
+> ![7](.markdown.images/7.png)
+>
+> ```shell
+> git remote add upstream https://github.com/KNLc/CV_Notes.git
+> ```
+>
+> 添加后，再次查看远程目录的位置，应该会有4条记录
+>
+> ```shell
+> git remote -v
+> ```
+>
+> ```
+> m$      git remote -v
+> origin	git@github.com:LOWER-BO/CV_Notes.git (fetch)
+> origin	git@github.com:LOWER-BO/CV_Notes.git (push)
+> upstream	https://github.com/KNLc/CV_Notes.git (fetch)
+> upstream	https://github.com/KNLc/CV_Notes.git (push)
+> ```
+>
+> 从上游仓库upstream的master分支拉取代码到本地仓库的HEAD（HEAD指向哪个分支就是哪个）
+>
+> ```shell
+> git pull upstream master
+> ```
+>
+> 遇到问题
+>
+> ```
+> fatal: unable to access 'https://github.com/KNLc/CV_Notes.git/': Could not resolve
+> ```
+>
+> 不要慌，这个大概是你开启代理的原因，首先打开自己的小软件，然后找到http代理设置
+>
+> 接着输入
+>
+> ```
+> git config --global http.proxy  XXX.X.0.1:8080
+> git config --global https.proxy  XXX.X.0.1:8080
+> ```
+>
+> 现在再输入就可以搞定了，如下图所示
+>
+> ```
+> git pull upstream master
+> ```
+>
+> ![8](.markdown.images/8.png)
+>
+> 此时，你的本地库已经和原仓库已经完全同步了。但是注意，此时只是你电脑上的本地库和远程的github原仓库同步了，你自己的github仓库还没有同步，此时需要使用“git push”命令把你本地的仓库提交到github中。 
+>
+> 同步本地仓库的master分支到自己fork的远程仓库origin：
+>
+> ```shell
+> git push origin master
+> ```
+>
+> ```
+> Total 0 (delta 0), reused 0 (delta 0)
+> To github.com:LOWER-BO/CV_Notes.git
+>    7ab2d8b..e17a064  master -> master
+> ```
+>
+> 
+
+## Git远程推送时设置用户名和密码
+
+ 当使用HTTPS协议推送代码到Git仓库时，发现每次都需要输入密码，操作起来非常麻烦。下面介绍几种免去输入密码的方法。 
+
+### HTTPS协议推送
+
+使用HTTPS协议，有一种简单粗暴的方式是在远程地址中带上密码。 
+
+```shell
+git remote set-url origin http://yourname:password@github.com/yourname/project.git
+```
+
+
+
+## 其他问题
+
+### fatal: unable to access 'https://github.com/xxxxx/xxxx.git/': Failed to connect to github.com port 443: Timed out
+
+参考：  https://blog.csdn.net/natahew/article/details/81387885 
+
+清理下DNS，再试一下。这个可以
+
+```shell
+ipconfig /flushdns 
+```
+
+### git status不能显示中文
+
+现象：status查看有改动但未提交的文件时总只显示数字串，显示不出中文文件名，非常不方便。
+
+原因：在默认设置下，中文文件名在工作区状态输出，中文名不能正确显示，而是显示为八进制的字符编码。
+
+解决：参考https://blog.csdn.net/u012145252/article/details/81775362
+
+终端输入指令：
+
+```shell
+git config --global core.quotepath false
+```
+
+
+
+## github基本使用
+
+- 移除跟踪但不删除文件
+
+    ```shell
+    $ git rm --cached readme.txt
+    ```
+
+- git 列出已经跟踪的文件: 
+
+  ```shell
+  git ls-files
+  ```
+  
+- 添加改动：用命令git add告诉Git，把文件添加到仓库（**每次修改后提交前都要add一次**）：
+    ```shell
+    $ git add readme.txt
+    ```
+
+- 提交。用命令git commit告诉Git，把文件提交到仓库：
+    ```shell
+    $ git commit -m "wrote a readme file"
+    [master (root-commit) eaadf4e] wrote a readme file
+     1 file changed, 2 insertions(+)
+     create mode 100644 readme.txt
+    ```
+    解释git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。
+    git commit命令执行成功后会告诉你，1 file changed：1个文件被改动（我们新添加的readme.txt文件）；2 insertions：插入了两行内容（readme.txt有两行内容）。
+    
+- 仓库状态。命令可以让我们时刻掌握仓库当前的状态
+    ```shell
+    $git status
+    ```
+    
+- 显示提交日志:
+    ```shell
+    $git log
+    ```
+    
+    ![](git使用.assets/clip_image001.png)  
+    
+    如果嫌输出信息太多，看得眼花缭乱的，可以试试加上`--pretty=oneline`参数：
+    
+    ![](git使用.assets/clip_image001-1593267351770.png)
+    
+- 创建dev分支，然后切换到dev分支：
+
+    ```shell
+    $ git checkout -b dev 
+    ```
+
+    上面的-b参数表示创建并切换，等价于下两条指令：
+
+    ```shell
+    $ git branch dev #创建dev分支
+    $ git checkout dev #切换到dev分支
+    ```
+
+    用git branch命令查看当前分支：
+
+    ```shell
+    $ git branch
+    ```
+
+- 推送到远程
+
+    git push的一般形式为 `git push <远程主机名> <本地分支名>  <远程分支名>` ，例如 
+
+    ```shell
+    git push origin master: refs/heads/master
+    ```
+
+    即是将本地的master分支推送到远程主机origin上的对应master分支， origin 是远程主机名，第一个master是本地分支名，第二个master是远程分支名。
+
+    **关于 refs/for**
+
+    refs/for 的意义在于我们提交代码到服务器之后是需要经过code review 之后才能进行merge的，而refs/heads 不需要
+    
+- 记得将隐藏文件 `.markdown.images` 添加到跟踪中。
+

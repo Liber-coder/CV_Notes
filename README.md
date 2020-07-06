@@ -26,7 +26,7 @@
 ### [🎨 图像处理](./ImageProcessing)
 
 * [图像滤波——高斯滤波。手写高斯滤波以及优化](./ImageProcessing/高斯滤波器.md)
-* 
+* [RANSAC](./ImageProcessing/RANSAC.md)
 
 ### [👁计算机视觉(偏AI)](./CV)
 
@@ -62,7 +62,7 @@
 - [ ] 手写马赛克代码
 - [ ] LBP特征。原理，如何计算相似性（汉明距离），汉明距离怎么计算
 - [ ] 数据增强有哪些方式，具体的图像处理操作又有哪些？
-- [ ] RANSAC
+- [x] [RANSAC](./ImageProcessing/RANSAC.md)
 
 ### 👁计算机视觉(偏AI)
 
@@ -72,7 +72,7 @@
 
 想要一起把内容完善，可以按照 `合作要求` 提交 `Pull requests` 。
 
-TODO：详细的贡献指南参考[这里]()，包括要求和git使用
+TODO：详细的贡献指南参考[这里](贡献指南/git使用.md)，包括要求和git使用
 
 ### 合作要求
 
