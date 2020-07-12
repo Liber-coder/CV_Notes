@@ -25,8 +25,10 @@
 
 ### [🎨 图像处理](./ImageProcessing)
 
-* [图像滤波——高斯滤波。手写高斯滤波以及优化](./ImageProcessing/高斯滤波器.md)
-* [RANSAC](./ImageProcessing/RANSAC.md)
+* [图像滤波——高斯滤波。代码实现以及优化](./ImageProcessing/高斯滤波器.md)
+* [图像滤波——均值滤波。代码实现以及优化](./ImageProcessing/均值滤波.md)
+* [图像滤波——中值滤波。代码实现](./ImageProcessing/中值滤波.md)
+* [随机采样一致(RANSAC)原理和实现](./ImageProcessing/RANSAC.md)
 
 ### [👁计算机视觉(偏AI)](./CV)
 
@@ -53,17 +55,16 @@
 - [x] [图像滤波——高斯滤波。代码实现以及优化](./ImageProcessing/高斯滤波器.md)
 - [x] [图像滤波——均值滤波。代码实现以及优化](./ImageProcessing/均值滤波.md)
 - [x] [图像滤波——中值滤波。代码实现](./ImageProcessing/中值滤波.md)
+- [x] [随机采样一致(RANSAC)原理和实现](./ImageProcessing/RANSAC.md)
 - [ ] SIFT特征。
     SIFT的原理（尺度不变性、旋转不变性），如何下采样，下采样因子多少，为什么要求解DOG，为什么要使用三线插值函数，128维度描述子怎么来的，梯度直方图怎么算的，梯度怎么算的，梯度方向怎么算的，邻域范围选的多大等等
 - [ ] 除了SIFT，还知道哪些特征，除了SIFT、SURF、ASIFT、ORB、HOG还有啥
-- [x] 
 - [ ] 图像降噪算法。
 - [ ] 图像增强算法。
 - [ ] 边缘检测算子：Robert prewit sobel 拉普拉斯 canddy
 - [ ] 手写马赛克代码
 - [ ] LBP特征。原理，如何计算相似性（汉明距离），汉明距离怎么计算
 - [ ] 数据增强有哪些方式，具体的图像处理操作又有哪些？
-- [x] [RANSAC](./ImageProcessing/RANSAC.md)
 
 ### 👁计算机视觉(偏AI)
 
@@ -73,7 +74,7 @@
 
 想要一起把内容完善，可以按照 `合作要求` 提交 `Pull requests` 。
 
-TODO：详细的贡献指南参考[这里](贡献指南/git使用.md)，包括要求和git使用
+详细的贡献指南参考[这里](贡献指南/git使用.md)，包括要求和git使用
 
 ### 合作要求
 
