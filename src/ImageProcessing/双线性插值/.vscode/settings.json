@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "cmath": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
+    }
+}
