@@ -8,7 +8,7 @@
 
 - C/C++开发：[interview](https://github.com/huihut/interview)
 - java开发：[CS-Notes](https://github.com/CyC2018/CS-Notes)、[javaGuide](https://github.com/Snailclimb/JavaGuide)
-- CV算法岗（偏AI方向）：[CV_interviews_Q-A](https://github.com/GYee/CV_interviews_Q-A)、[AI-Job-Notes](https://github.com/amusi/AI-Job-Notes)
+- CV算法岗（偏AI方向）：[CV_interviews_Q-A](https://github.com/GYee/CV_interviews_Q-A)、[AI-Job-Notes](https://github.com/amusi/AI-Job-Notes)、[DL-Prep](https://github.com/shiyutang/DL-Prep)
 
 ---
 
@@ -21,10 +21,11 @@
 
 ### [📷 3D视觉(三维重建、SLAM、AR/VR)](./3D_Vision)
 
-- [2D和3D空间中的变换](./CV/2D和3D空间中的变换.md)
+- [2D和3D空间中的变换](./3D_Vision/2D和3D空间中的变换.md)
 - [针孔相机模型](./3D_Vision/针孔相机模型.md)
 - [张定友标定法](./3D_Vision/张定友标定法.md)
 - [光流算法](./3D_Vision/光流算法.md)
+- [矩阵分解与线性方程组](./3D_Vision/矩阵分解与线性方程组.md) | 包括QR分解和SVD分解求解线性方程组的原理，QR分解投影矩阵P得到相机内外参
 
 ### [🎨 图像处理](./ImageProcessing)
 
@@ -46,8 +47,10 @@
 - [x] [几种变换矩阵（透视、仿射、相似等），他们的自由度，特点](./CV/2D和3D空间中的变换.md)
 - [x] [针孔相机模型](./3D_Vision/针孔相机模型.md)
 - [x] [张定友标定法](./3D_Vision/张定友标定法.md)
-- [ ] SVD分解、二维相似变换的求解为例
-- [ ] QR分解，什么时候用SVD什么时候用SVD？他们的区别？
+- [x] [光流算法](./3D_Vision/光流算法.md)
+- [x] [矩阵分解与线性方程组](./3D_Vision/矩阵分解与线性方程组.md)
+    - [x] SVD分解、二维相似变换的求解为例
+    - [x] QR分解，什么时候用SVD什么时候用SVD？他们的区别？
 - [ ] 相机加畸变与去畸变
 - [ ] 3*3的几何变换矩阵，每个参数代表啥意思？
 - [ ] 特征降维有哪些方式？下采样，NMS，1*1，pca，LDA？
@@ -64,7 +67,6 @@
 - [ ] K-D tree
 - [ ] BA、LM算法
 - [ ] 双目立体视觉、视差图、深度图。双目相机获得深度图伪代码
-- [x] [光流算法](./3D_Vision/光流算法.md)
 - [ ] 最小二乘法拟合数据，以拟合直线为例
 
 ### 🎨 图像处理
