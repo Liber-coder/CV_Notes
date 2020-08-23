@@ -2,7 +2,9 @@
 
 
 
+## TODO:
 
+- [2019浙大SLAM暑期学校--刘浩敏《集束调整》](https://blog.csdn.net/qq_15698613/article/details/97263646) | 讲得广度深度都不错，找一下回放看看。
 
 ## BA为什么叫BA
 
@@ -85,4 +87,4 @@ https://blog.csdn.net/optsolution/article/details/64442962
 - 《视觉SLAM十四讲》第一版 - 高翔
 - 《计算机视觉的数学方法》附录A4.3
 - 《计算机视觉中的多视图几何》第一版
-- 
+- [2019浙大SLAM暑期学校--刘浩敏《集束调整》](https://blog.csdn.net/qq_15698613/article/details/97263646) | 讲得广度深度都不错，找一下回放看看。
