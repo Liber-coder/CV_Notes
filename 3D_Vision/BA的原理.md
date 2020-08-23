@@ -4,7 +4,7 @@
 
 ## TODO:
 
-- [2019浙大SLAM暑期学校--刘浩敏《集束调整》](https://blog.csdn.net/qq_15698613/article/details/97263646) | 讲得广度深度都不错，找一下回放看看。
+- [2019浙大SLAM暑期学校--刘浩敏《集束调整》](https://blog.csdn.net/qq_15698613/article/details/97263646) | 讲得广度深度都不错，找一下回放看看。[2019年暑期学校回放](https://blog.csdn.net/qq_15698613/article/details/96872721)，[bilibili](https://space.bilibili.com/36728694)
 
 ## BA为什么叫BA
 
