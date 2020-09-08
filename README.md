@@ -32,6 +32,7 @@
 - [2015年大疆算法工程师笔试题](./3D_Vision/2015年大疆算法工程师笔试题.md) | 包含图像、3D视觉等岗位，其中3D视觉部分含答案
 - [BA的原理](./3D_Vision/BA的原理.md)
 - [ICP算法](./3D_Vision/ICP算法.md)
+- [PnP算法](./3D_Vision/PnP算法.md) | [PnP的多解的错误估计问题](https://github.com/opencv/opencv/issues/8813)还没搞清楚
 
 ### [🎨 图像处理](./ImageProcessing)
 
@@ -53,7 +54,6 @@
 - [ ] 相机加畸变与去畸变
 - [ ] 3*3的几何变换矩阵，每个参数代表啥意思？
 - [ ] 特征降维有哪些方式？下采样，NMS，1*1，pca，LDA？
-- [ ] 2D-3D：PnP | [PnP的多解的错误估计问题](https://github.com/opencv/opencv/issues/8813)
 - [ ] 2D-2D：基本矩阵、本质矩阵
 - [ ] 相机标定 - DLT、PnP及其变种、张定友标定法
 - [ ] 参数矩阵求逆
