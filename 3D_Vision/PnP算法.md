@@ -127,15 +127,15 @@ $$
 
 将(1b)代入(1a)，消掉 $\alpha_{i1}$ 有
 $$
-\begin{align}
+\begin{aligned}
 P_{i}^{w} &= \sum_{j=1}^{4}\alpha_{ij}c_j^{w} \\
  &= \alpha_{i1}c_1^{w} + \alpha_{i2}c_2^{w} + \alpha_{i3}c_3^{w} + \alpha_{i4}c_4^{w} \\
  &= (1-\alpha_{i2}-\alpha_{i3}-\alpha_{i4})c_1^{w} + \alpha_{i2}c_2^{w} + \alpha_{i3}c_3^{w} + \alpha_{i4}c_4^{w}
-\end{align}
+\end{aligned}
 $$
 移项后，有
 $$
-\begin{align}
+\begin{aligned}
 P_{i}^{w}-c_1^{w} 
  &= \alpha_{i2}(c_2^{w}-c_1^{w}) + \alpha_{i3}(c_3^{w}-c_1^{w}) + \alpha_{i4}(c_4^{w}-c_1^{w}) \\
  &= \begin{bmatrix}
@@ -146,18 +146,18 @@ P_{i}^{w}-c_1^{w}
     \alpha_{i3} \\
     \alpha_{i4}
     \end{bmatrix}
-\end{align}
+\end{aligned}
 $$
 令 $CC = \begin{bmatrix}c_2^{w}-c_1^{w} & c_3^{w}-c_1^{w} & c_4^{w}-c_1^{w}\end{bmatrix}$ 因此可求解 $\alpha_{ij}$ 
 $$
-\begin{align}
+\begin{aligned}
 \begin{bmatrix}
     \alpha_{i2} \\
     \alpha_{i3} \\
     \alpha_{i4}
     \end{bmatrix} &= CC^{-1}(P_{i}^{w}-c_1^{w}) \\
 \alpha_{i1} &= 1-\alpha_{i2}-\alpha_{i3}-\alpha_{i4}
-\end{align}
+\end{aligned}
 $$
 根据上面的推导，可知控制点的选取要使得矩阵 $CC$ 是可逆的。
 
@@ -257,20 +257,20 @@ $$
 
 稍微改变一下上面式子的写法，变形为
 $$
-\begin{align}
+\begin{aligned}
 ||c_i^w-c_j^w||^2 
  &= ||\beta_1(v_1^{[i]}-v_1^{[j]}) + \beta_2(v_2^{[i]}-v_2^{[j]}) + \beta_3(v_3^{[i]}-v_3^{[j]}) + \beta_4(v_4^{[i]}-v_4^{[j]})||^2 \\
  &= ||\beta_1S_1 + \beta_2S_2 + \beta_3S_3 + \beta_4S_4||^2 \\
-\end{align}
+\end{aligned}
 $$
 其中，$S_k^{[ij]} = v_k^{[i]}-v_k^{[j]}$。应用完全平方和公式展开（4项的完全平方和公式见附录），有
 $$
-\begin{align}
+\begin{aligned}
 ||c_i^w-c_j^w||^2 
  &= ||\beta_1(v_1^{[i]}-v_1^{[j]}) + \beta_2(v_2^{[i]}-v_2^{[j]}) + \beta_3(v_3^{[i]}-v_3^{[j]}) + \beta_4(v_4^{[i]}-v_4^{[j]})||^2 \\
  &= ||\beta_1S_1 + \beta_2S_2 + \beta_3S_3 + \beta_4S_4||^2 \\
  &= \beta_1^2S_1^TS_1 + 2\beta_1\beta_2S_1^TS_2 + \beta_2^2S_2^TS_2 + 2\beta_1\beta_3S_1^TS_3 + 2\beta_2\beta_3S_2^TS_3 + \beta_3^2S_3^TS_3 + 2\beta_1\beta_4S_1^TS_4 + 2\beta_2\beta_4S_2^TS_4 + 2\beta_3\beta_4S_3^TS_4 + \beta_4^2S_4^TS_4 \\
-\end{align}
+\end{aligned}
 $$
 将其写成矩阵的形式，有
 $$
@@ -395,11 +395,11 @@ $$
 
 关于 $L_{6\times 10}$ 的推导要用到4项的完全平方和公式，为了方便，这里直接给出来2、3、4项的平方和公式：
 $$
-\begin{align}
+\begin{aligned}
 (a+b)^2 &= a^2+b^2+2ab \\ 
 (a+b+c)^2 &= a^2+b^2+c^2+2ab+2ac+2bc \\ 
 (a+b+c+d)^2 &= a^2+b^2+c^2+d^2+2ab+2ac+2ad+2bc+2bd+2cd \\ 
-\end{align}
+\end{aligned}
 $$
 规律：展开的项数总和应该是2*n (n是n式项的平方的项数）n式项里的每一项都有平方,而且两两之间都有乘积的两...记得规律在排列组合里学过。
 

@@ -105,10 +105,10 @@ $$
 
 思路是，通过只有R的误差项求解出R。首先展开只有R的误差项：
 $$
-\begin{align}
+\begin{aligned}
 \frac{1}{2}\sum_{i=1}^{N}||q'_i - Rq_i||_2^2 &= \frac{1}{2}\sum_{i=1}^{N}(q'^T_iq_i + q^T_iR^TRq_i - 2q'^T_iRq_i) \\
  &= \frac{1}{2}\sum_{i=1}^{N}(q'^T_iq_i + q^T_iq_i - 2q'^T_iRq_i)
-\end{align}
+\end{aligned}
 $$
 注意到前两项都与R无关，因此实际上优化函数变为：
 $$
@@ -116,14 +116,14 @@ $$
 $$
 注意到上面式子结果是个1x1的标量的和，所以标量再套个迹的运算，也不影响结果：
 $$
-\begin{align}
+\begin{aligned}
 \sum_{i=1}^{N}-q'^T_iRq_i
  &= \sum_{i=1}^{N}tr(-q'^T_iRq_i) \\
  &= -\sum_{i=1}^{N}tr(q'^T_i(Rq_i)) \\
  &= -\sum_{i=1}^{N}tr((Rq_i)q'^T_i) \\
  &= -\sum_{i=1}^{N}tr(R(q_iq'^T_i)) \\
  &= -tr(R\sum_{i=1}^{N}q_iq'^T_i) \\
-\end{align}
+\end{aligned}
 $$
 上面的推导用到了迹的性质，详情看附录。
 
@@ -141,12 +141,12 @@ $$
 
 将 $R = X = VU^T$ 代入误差函数，取代R那一项，有
 $$
-\begin{align}
+\begin{aligned}
 -tr(R\sum_{i=1}^{N}q_iq'^T_i) 
  &= -tr(RW) \\
  &= -tr(XW) \\
  &= -tr(VU^TUDV^T) \\
-\end{align}
+\end{aligned}
 $$
 由于V和U都是正交矩阵，所以 $U^TU = E$ ，则上式变为
 $$
@@ -206,19 +206,19 @@ $$
 
 在论文中，推导用的相关公式如下：
 $$
-\begin{align}
+\begin{aligned}
  p'_i &= Rp_i + T + N_i \\
  W &= \sum_{i=1}^{N}q_iq'^T_{i} \\
  R &= VU^T \\
-\end{align}
+\end{aligned}
 $$
 在书《视觉slam十四讲》中，推导用的相关公式如下：
 $$
-\begin{align}
+\begin{aligned}
  p_i &= Rp'_i + t + e_i \\
  W &= \sum_{i=1}^{N}q_iq'^T_{i} \\
  R &= UV^T \\
-\end{align}
+\end{aligned}
 $$
 可以看到，它们的旋转矩阵R，一个是从 $p_i$ 到 $p'_i$ 的，另一个正好相反，但是W的矩阵定义却是一样的，这就是差异所在。实际上，书《视觉slam十四讲》中的定义不够直观，它的W应该定义为 $\sum_{i=1}^{N}q_iq'^T_{i}$ 的转置才更合适，正是由于它们对W的定义差了一个转置，所以导致得到的解R，也差一个转置($UV^T=(VU^T)^T$)。
 
