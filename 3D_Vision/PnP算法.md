@@ -182,7 +182,7 @@ A=
 $$
 计算 $A^TA$ 的3个特征值为 $\lambda_1,\lambda_2,\lambda_3$ ，对应的特征向量为 $v_1,v_2,v_3$ 。那么剩余的三个控制点为
 $$
-\left\{\begin{array}{l}\mathbf{c}_{2}^{w}=\mathbf{c}_{1}^{w}+\sqrt{\frac{\lambda_{1}}{n}} \mathbf{v}_{1} \\ \mathbf{c}_{3}^{w}=\mathbf{c}_{1}^{w}+\sqrt{\frac{\lambda_{2}}{n} \mathbf{v}_{2}} \\ \mathbf{c}_{4}^{w}=\mathbf{c}_{1}^{w}+\sqrt{\frac{\lambda_{3}}{n} \mathbf{v}_{3}}\end{array}\right.
+\left\{\begin{array}{l}\mathbf{c}_{2}^{w}=\mathbf{c}_{1}^{w}+\sqrt{\frac{\lambda_{1}}{n}} \mathbf{v}_{1} \\ \mathbf{c}_{3}^{w}=\mathbf{c}_{1}^{w}+\sqrt{\frac{\lambda_{2}}{n}} \mathbf{v}_{2} \\ \mathbf{c}_{4}^{w}=\mathbf{c}_{1}^{w}+\sqrt{\frac{\lambda_{3}}{n}} \mathbf{v}_{3}\end{array}\right.
 $$
 到目前为止，我们已知可以知道4个控制点在世界坐标系下的坐标 $c_j$ ，每一个3D点的hd坐标 $\alpha_{ij}$ 。如果我们能把4个控制点在相机坐标系下的坐标求解出来，再计算出3D点在相机坐标系下的坐标，就可以得到3D-3D的匹配关系，然后通过ICP求解外参R,t，下面就沿着这个思路展开。
 
