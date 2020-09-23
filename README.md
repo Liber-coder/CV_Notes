@@ -33,7 +33,7 @@
 - [ICP算法](./3D_Vision/ICP算法.md)
 - [PnP算法](./3D_Vision/PnP算法.md) | [PnP的多解的错误估计问题](https://github.com/opencv/opencv/issues/8813)还没搞清楚
 - [PCA算法](./3D_Vision/PCA算法.md) | 从最大可分性的角度介绍了PCA，并给出代码实现
-- [张定友标定法](./3D_Vision/张定友标定法.md)
+- [张正友标定法](./3D_Vision/张正友标定法.md)
 
 ### [🎨 图像处理](./ImageProcessing)
 
