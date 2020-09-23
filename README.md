@@ -24,7 +24,6 @@
 - [视觉算法工程师笔试题1](./3D_Vision/视觉算法工程师笔试题1.md)
 - [2D和3D空间中的变换](./3D_Vision/2D和3D空间中的变换.md)
 - [针孔相机模型](./3D_Vision/针孔相机模型.md)
-- [张定友标定法](./3D_Vision/张定友标定法.md)
 - [光流算法](./3D_Vision/光流算法.md)
 - [矩阵分解与线性方程组](./3D_Vision/矩阵分解与线性方程组.md) | 包括QR分解和SVD分解求解线性方程组的原理，QR分解投影矩阵P得到相机内外参
 - [光线追踪](./3D_Vision/光线追踪.md)
@@ -34,6 +33,7 @@
 - [ICP算法](./3D_Vision/ICP算法.md)
 - [PnP算法](./3D_Vision/PnP算法.md) | [PnP的多解的错误估计问题](https://github.com/opencv/opencv/issues/8813)还没搞清楚
 - [PCA算法](./3D_Vision/PCA算法.md) | 从最大可分性的角度介绍了PCA，并给出代码实现
+- [张定友标定法](./3D_Vision/张定友标定法.md)
 
 ### [🎨 图像处理](./ImageProcessing)
 
